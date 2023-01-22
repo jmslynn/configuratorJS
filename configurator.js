@@ -2,16 +2,20 @@
 const colors = [
   {"_id": "c1",
   "color_name": "blue", 
-  "color_value": "#165895"},
+  "color_value": "#165895",
+  "image_name": "blue.png"},
   {"_id": "c2",
   "color_name": "teal", 
-  "color_value": "#509F9B"},
+  "color_value": "#509F9B",
+  "image_name": "teal.png"},
   {"_id": "c3",
   "color_name": "forest", 
-  "color_value": "#6F8248"},
+  "color_value": "#6F8248",
+  "image_name": "forest.png"},
   {"_id": "c4",
   "color_name": "pink", 
-  "color_value": "#EFC7D1"},
+  "color_value": "#EFC7D1",
+  "image_name": "pink.png"},
 ]
 
 const designs = [
@@ -42,9 +46,7 @@ function setProductDetails(id)
         document.getElementById('message').innerHTML = 
       design.message;}
     else if(id.charAt(0) === 'c') {let color = colors.find(color => color._id === id);
-    document.getElementById('codeWindow').innerHTML = 
-      `set=color[ ${color.color_value} ]
-      colorize=color[global.color]`
+    document.getElementById('tumbler').src= color.image_name;
     }
   }    
 
